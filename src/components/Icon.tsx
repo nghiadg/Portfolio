@@ -6,6 +6,8 @@ import {
   faFileDownload,
   faBars,
   faTimes,
+  faArrowUp,
+  faArrowDown,
 } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
@@ -35,4 +37,13 @@ export const IconBars: React.FC = () => {
 export const IconClose: React.FC = () => {
   return <Icon icon={faTimes} />;
 };
+
+export const IconArrowUp: React.FC = () => {
+  return <Icon icon={faArrowUp} />;
+};
+
+export const IconArrowDown: React.FC = () => {
+  return <Icon icon={faArrowDown} />;
+};
+
 export default Icon;
