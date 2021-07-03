@@ -32,23 +32,3 @@ a {
   display: block;
   text-decoration: none;
 }
-
-.line::after {
-  content: "";
-  height: 19px;
-  width: 324px;
-  background-image: url("assets/images/line.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: -1;
-}
-
-@media screen and (max-width: 426px) {
-  .line::after {
-    width: 100%;
-  }
-}

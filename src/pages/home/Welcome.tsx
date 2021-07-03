@@ -2,42 +2,42 @@ import * as React from "react";
 import { IconEmail, IconGitHub, IconFileDownload } from "components/Icon";
 import { PrimaryButton, SecondaryButton } from "components/Button";
 
-const Welcome: React.FC = () => {
+type Info = {
+  name: string;
+  role: string;
+  roleDescription: string;
+  email: string;
+  github: string;
+};
+interface WelcomeProps {
+  info: Info;
+}
+
+const Welcome: React.FC<WelcomeProps> = ({ info }) => {
   return (
-    <div className="min-h-screen flex items-center pt-10">
+    <div className="h-screen flex items-center">
       <div className="w-full lg:w-2/4">
-        <span className="text-xl font-medium inline-block w-full">Hey!</span>
-        <span className="text-3xl font-semibold inline-block w-full">
-          I&apos;m <span className="text-primary">Duong Trong Nghia.</span>
+        <span className="text-xl font-medium inline-block w-full sm:text-3xl">
+          Hey!
         </span>
-        <span className="text-3xl font-semibold line relative">
-          an Software Engineer
-        </span>
-        <p>
-          Fontend Software with ReactJs. I&apos;m learning React Native. If you
-          are a business seeking a web presence, mobile application or an
-          employer looking to hire, you can get in touch with me.
-        </p>
+        <h1 className="text-3xl font-semibold inline-block w-full sm:text-large">
+          I&apos;m <span className="text-primary">{info.name}</span>
+        </h1>
+        <span className="text-3xl font-semibold relative">an {info.role}</span>
+        <p className="mt-1">{info.roleDescription}</p>
 
         <div className="mt-3.2 text-md flex items-center mb-4.5">
           <span className="mr-3">Follow me</span>
           <ul>
             <li className="text-2xl cursor-pointer">
-              <a
-                href="https://github.com/nghiadg"
-                target="_blank"
-                rel="noreferrer"
-              >
+              <a href={info.github} target="_blank" rel="noreferrer">
                 <IconGitHub />
               </a>
             </li>
           </ul>
         </div>
         <div className="flex justify-between flex-col sm:flex-row sm:justify-start">
-          <a
-            className="mb-2 sm:mb-0 sm:mr-3"
-            href="mailto: nghiadt.dev@gmail.com"
-          >
+          <a className="mb-2 sm:mb-0 sm:mr-3" href={`mailto: ${info.email}`}>
             <PrimaryButton
               title="Email me"
               icon={<IconEmail />}
