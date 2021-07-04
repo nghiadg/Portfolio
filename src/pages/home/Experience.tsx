@@ -1,9 +1,10 @@
 import * as React from "react";
-import img from "assets/images/education.png";
+// import img from "assets/images/education.png";
 import Wrapper from "components/Wrapper";
 
 type Work = {
   companyName: string;
+  logo: string;
   position: string;
   timePeriod: string;
   description: string;
@@ -18,7 +19,10 @@ const Experience: React.FC<ExperienceProps> = ({ experiences }) => {
       {experiences.map((work: Work) => (
         <Wrapper heading="Experience" key={work.timePeriod}>
           <div className="flex items-center">
-            <img src={img} className="hidden lg:block mr-18" />
+            <img
+              src={process.env.PUBLIC_URL + "/" + work.logo}
+              className="hidden lg:block mr-18"
+            />
             <div className="flex justify-between">
               <div>
                 <h3 className="text-primary text-xl mb-2 sm:mb4">
