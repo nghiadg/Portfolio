@@ -18,14 +18,16 @@ export const resumeData = {
   ],
   experiences: [
     {
-      companyName: "Ominext JSC",
+      companyName: "Ominext Group JSC",
+      logo: "Ominext.png",
       position: "as an Intern",
       timePeriod: "12/2019 - 4/2020",
       description:
         "I finished my internship (Sukura Campus 4) and received a Certificate of Excellence and first prize for the individual.",
     },
     {
-      companyName: "Ominext JSC",
+      companyName: "Ominext Group JSC",
+      logo: "Ominext.png",
       position: "in Software Engineering",
       timePeriod: "4/2020 - 9/2020",
       description:
@@ -33,6 +35,7 @@ export const resumeData = {
     },
     {
       companyName: "IntX JSC",
+      logo: "Intx.png",
       position: "in Software Engineering",
       timePeriod: "11/2020 - 6/2021",
       description:
